@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
 
-const SlideShow = ({ images }) => {
+const Slide = ({ images }) => {
   const sliderSpeed = 20; // ✅ Slower and smoother speed (20 seconds per loop)
 
   return (
@@ -40,4 +40,4 @@ const SlideShow = ({ images }) => {
   );
 };
 
-export default SlideShow;
+export default Slide;

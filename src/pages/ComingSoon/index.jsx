@@ -12,7 +12,7 @@ import {
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import SlideShow from "../../components/coming_soon/slideshow"; 
+import Slide from "../../components/coming_soon/Slide"; 
 import logo from "/logo01-red.png"; 
 
 const primaryRed = "#C02232";
@@ -167,7 +167,7 @@ const ComingSoonPage = () => {
       </MotionButton>
 
     
-      <SlideShow
+      <Slide
         images={[
           "/images/1.jpeg",
           "/images/2.jpeg",

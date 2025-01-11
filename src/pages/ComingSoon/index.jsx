@@ -12,8 +12,8 @@ import {
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import SlideShow from "../../components/coming_soon/slideshow"; // ✅ Slideshow Component
-import logo from "/logo01-red.png"; // ✅ Ensure your logo is in `public/`
+import SlideShow from "../../components/coming_soon/slideshow"; 
+import logo from "/logo01-red.png"; 
 
 const primaryRed = "#C02232";
 const textWhite = "#383938";

@@ -33,10 +33,17 @@ const Navbar = () => {
   return (
     <Box w="full" position="fixed" top="0" zIndex="20">
       <Flex
+      className="navbar"
         as="nav"
         position={scrolled ? "sticky" : "absolute"}
-        top={{ base: "52px", sm: "53px", md: "53px", lg: "53px" }}
-        left="0" // Ensures navbar starts from left edge
+        top={{ base: "52px", md: "53px", lg: "53px" }}
+        // bottom={{sm: "-40px", md: "0px", lg: "0px"}}
+        sx={{
+          "@media (max-width: 480px)": {
+            top: "30px",
+          },
+        }}
+        left="0" 
         w="100vw" // Full width of viewport to avoid extra space
         maxW="100vw" // Prevents overflow
         bg={scrolled ? "rgba(255, 255, 255, 0.36)" : "rgba(0, 0, 0, 0.16)"}

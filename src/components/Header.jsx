@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Text, Icon, useBreakpointValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdEmail, MdPhone } from "react-icons/md";
-import { logoInnerRed } from "../constants"; // Ensure this exists
+import { logoInnerRed } from "../constants"; 
 
 const MotionFlex = motion(Flex);
 
@@ -18,7 +18,7 @@ const Header = () => {
       transition={{ duration: 0.7, ease: "easeOut" }}
       bg={logoInnerRed}
       w="full"
-      p={{ base: 3, md: 4 }}
+      p={{ base: 1, md: 4 }}
       justify={'right'}
       align="end"
       flexDirection={flexDirection}

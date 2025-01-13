@@ -207,8 +207,8 @@ const Footer = () => {
             <Link fontSize="sm" fontWeight="bold" _hover={{ color: "red.500" }}>
               Cat Expo India 23rd June 2024
             </Link>
+          {/* <Divider borderColor="gray.600" w={"100%"} /> */}
           </VStack>
-          <Divider borderColor="gray.600" />
 
           <VStack align="start" spacing={2} mt={4} width="100%">
             <Image

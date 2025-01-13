@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Flex, Link, Image, IconButton, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import {yellowTone, Darkyellow, logoInnerRed} from "../constants";
 
 const MotionBox = motion(Box);
 
@@ -10,7 +11,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // Mobile menu state
 
   const handleScroll = () => {
-    setScrolled(window.scrollY > 50);
+    setScrolled(window.scrollY > 30);
   };
 
   useEffect(() => {
@@ -73,8 +74,8 @@ const Navbar = () => {
                 fontWeight="bold"
                 fontSize="sm"
                 textTransform="uppercase"
-                color={scrolled ? "gray.800" : "gray.800"}
-                _hover={{ textDecoration: "none", color: "green.800" }}
+                color={scrolled ? "gray.800" : "gray.800" }
+                _hover={{ textDecoration: "none", color: logoInnerRed }}
                 position="relative"
                 transition="color 0.3s ease-in-out"
               >
@@ -88,7 +89,7 @@ const Navbar = () => {
                 bottom="-3px"
                 width="0%"
                 height="2px"
-                bg="green.800"
+                bg={logoInnerRed}
                 transition="width 0.3s ease-in-out"
               />
             </MotionBox>

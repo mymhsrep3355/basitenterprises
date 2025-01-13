@@ -26,7 +26,7 @@ const textContainerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2 }, // ✅ Delay between each word animation
+    transition: { staggerChildren: 0.2 },
   },
 };
 
@@ -99,16 +99,16 @@ const ComingSoonPage = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <Image
-            src={logo} // ✅ Uses your complete logo
+            src={logo} 
             alt="Basit Enterprises"
             width={{ base: "250px", md: "500px" }}
             borderRadius="full"
-            filter="drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.3))" // ✅ Slightly stronger shadow for emphasis
+            filter="drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.3))" 
           />
         </MotionBox>
       </MotionBox>
 
-      {/* ✅ Animated Text Slogan */}
+      
       <MotionText
         fontSize={{ base: "xl", md: "3xl" }}
         fontWeight="bold"
@@ -179,7 +179,7 @@ const ComingSoonPage = () => {
         ]}
       />
 
-      {/* ✅ Footer */}
+      
       <Flex
         mt={12}
         fontSize="sm"

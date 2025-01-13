@@ -11,8 +11,8 @@ const router = createBrowserRouter([
     element: <ComingSoonPage />,
   },
   {
-    path: "/",
-    element: <App />,
+    path: "/landing",
+    element: <Landing />,
   },
 ])
 function App() {

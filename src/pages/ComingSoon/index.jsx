@@ -161,7 +161,7 @@ const ComingSoonPage = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
-        // onClick={() => navigate("/landing")}
+        onClick={() => navigate("/landing")}
       >
         Stay Notified 🚀
       </MotionButton>

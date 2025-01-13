@@ -44,8 +44,8 @@ const Navbar = () => {
           },
         }}
         left="0" 
-        w="100vw" // Full width of viewport to avoid extra space
-        maxW="100vw" // Prevents overflow
+        w="100vw" 
+        maxW="100vw" 
         bg={scrolled ? "rgba(255, 255, 255, 0.36)" : "rgba(0, 0, 0, 0.16)"}
         backdropFilter={scrolled ? "blur(12px)" : "none"}
         transition="all 0.3s ease"

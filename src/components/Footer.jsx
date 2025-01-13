@@ -182,11 +182,11 @@ const Footer = () => {
 
         <VStack
           align="start"
-          ml={12}
+          // ml={12}
           flex="1"
           mt={{ base: 6, md: 0 }}
           width="100%"
-          mr={12}
+          // mr={12}
         >
           <Text fontWeight="bold" fontSize="lg">
             Latest News

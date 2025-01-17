@@ -4,6 +4,8 @@ import Footer from "../../components/Footer";
 import { Box, Flex } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
 import HeroSection from "../../components/Hero";
+import ContactUs from "../../components/ContactUs";
+import OurBrands from "../../components/OurBrands";
 
 const Landing = () => {
   return (
@@ -18,8 +20,8 @@ const Landing = () => {
       <Header />
       <Navbar />
       <HeroSection />
-
-      {/* Ensuring Footer stays at the bottom */}
+      <OurBrands />
+      <ContactUs />
       <Flex flex="1" />  
       
       <Footer />

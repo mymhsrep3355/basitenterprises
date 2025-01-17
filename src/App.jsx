@@ -6,12 +6,12 @@ import ComingSoonPage from './pages/ComingSoon/index.jsx'
 
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <ComingSoonPage />,
+  // },
   {
     path: "/",
-    element: <ComingSoonPage />,
-  },
-  {
-    path: "/landing",
     element: <Landing />,
   },
 ])

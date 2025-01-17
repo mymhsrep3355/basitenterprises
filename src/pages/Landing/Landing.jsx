@@ -8,6 +8,7 @@ import ContactUs from "../../components/ContactUs";
 import OurBrands from "../../components/OurBrands";
 import OurLocation from "../../components/OurLocation";
 import Footnote from "../../components/Footnote";
+import OurAchievements from "../../components/OurAchievements";
 
 const Landing = () => {
   return (
@@ -23,6 +24,7 @@ const Landing = () => {
       <Navbar />
       <HeroSection />
       <OurBrands />
+      <OurAchievements/>
       <ContactUs />
       {/* <Box h="1px" bg="red.500" /> */}
       <OurLocation/>

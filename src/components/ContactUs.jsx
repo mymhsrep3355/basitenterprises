@@ -39,9 +39,9 @@ const ContactUs = () => {
       ref={ref}
     >
       <Flex
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", lg: "row", md: "row" }}  
         justifyContent="space-between"
-        gap="12" 
+        gap="14" 
         align="flex-start"
       >
         

@@ -18,6 +18,7 @@ import {
 } from "@ant-design/icons";
 import { FaXTwitter } from "react-icons/fa6";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { textRed } from "../constants";
 
 const MotionBox = motion(Box);
 
@@ -37,7 +38,7 @@ const Footer = () => {
         justify="space-between"
         align="start"
         wrap="wrap"
-        spacing={5}
+        spacing={10}
       >
         <VStack
           align="start"
@@ -60,6 +61,33 @@ const Footer = () => {
             nutritious, reliable, and sustainable feed solutions to ensure the
             health and growth of your animals.
           </Text>
+
+          <VStack align="start" spacing={5} mt={{ base: 6, md: 0 }}>
+          <Text fontWeight="bold" fontSize="lg" mb={1}>
+            Keep in Touch
+          </Text>
+          <Divider borderColor="gray.600" />
+          <HStack spacing={3}>
+            <FaXTwitter size={20} color={textRed} />
+            <Link _hover={{ color: textRed }}>X (Twitter)</Link>
+          </HStack>
+          <HStack spacing={3}>
+            <FacebookOutlined style={{ fontSize: "20px", color: textRed }} />
+            <Link _hover={{ color: textRed }}>Facebook</Link>
+          </HStack>
+          <HStack spacing={3}>
+            <LinkedinOutlined style={{ fontSize: "20px", color: textRed }}  />
+            <Link _hover={{ color: textRed }}>LinkedIn</Link>
+          </HStack>
+          <HStack spacing={3}>
+            <InstagramOutlined style={{ fontSize: "20px", color: textRed }} />
+            <Link _hover={{ color: textRed }}>Instagram</Link>
+          </HStack>
+          <HStack spacing={3}>
+            <YoutubeOutlined style={{ fontSize: "20px", color: textRed }} />
+            <Link _hover={{ color: textRed }}>YouTube</Link>
+          </HStack>
+        </VStack>
         </VStack>
 
         <VStack
@@ -182,7 +210,7 @@ const Footer = () => {
 
         <VStack
           align="start"
-          // ml={12}
+          ml={2}
           flex="1"
           mt={{ base: 6, md: 0 }}
           width="100%"
@@ -227,33 +255,7 @@ const Footer = () => {
           </VStack>
         </VStack>
 
-        {/* Social Media Section */}
-        <VStack align="start" spacing={5} mt={{ base: 6, md: 0 }}>
-          <Text fontWeight="bold" fontSize="lg" mb={1}>
-            Keep in Touch
-          </Text>
-          <Divider borderColor="gray.600" />
-          <HStack spacing={3}>
-            <FaXTwitter size={20} />
-            <Link _hover={{ color: "red.500" }}>X (Twitter)</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <FacebookOutlined style={{ fontSize: "20px" }} />
-            <Link _hover={{ color: "red.500" }}>Facebook</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <LinkedinOutlined style={{ fontSize: "20px" }} />
-            <Link _hover={{ color: "red.500" }}>LinkedIn</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <InstagramOutlined style={{ fontSize: "20px" }} />
-            <Link _hover={{ color: "red.500" }}>Instagram</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <YoutubeOutlined style={{ fontSize: "20px" }} />
-            <Link _hover={{ color: "red.500" }}>YouTube</Link>
-          </HStack>
-        </VStack>
+        
       </Flex>
 
       {/* <Divider my={6} borderColor="gray.600" /> */}

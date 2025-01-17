@@ -36,7 +36,7 @@ const OurAchievements = () => {
     { id: 1, value: 400, label: "Customers" },
     { id: 2, value: 10, label: "Products" },
     { id: 3, value: 95, label: "Employees" },
-    { id: 4, value: 100, label: "Happy Pet Friends" },
+    { id: 4, value: 100, label: "Happy Pets" },
   ];
 
   return (
@@ -73,7 +73,7 @@ const OurAchievements = () => {
           ></Box>
         </VStack>
 
-        {/* Achievements Section */}
+
         <Flex
           wrap="wrap"
           justifyContent={{ base: "center", md: "flex-start" }}
@@ -93,7 +93,7 @@ const OurAchievements = () => {
               textAlign="center"
             >
               <Text
-                fontSize="4xl"
+                fontSize="3xl"
                 fontWeight="bold"
                 color="white"
                 fontFamily={'heading'}

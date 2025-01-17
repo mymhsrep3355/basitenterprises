@@ -38,7 +38,7 @@ const Footer = () => {
         justify="space-between"
         align="start"
         wrap="wrap"
-        spacing={10}
+        spacing={12}
       >
         <VStack
           align="start"

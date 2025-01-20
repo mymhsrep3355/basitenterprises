@@ -67,31 +67,32 @@ const ContactUs = () => {
             Basit Enterprises
           </Heading>
           <Box h="2px" w="50px" bg="red.500" mb="6" borderRadius="full" />
-          <VStack align="start" spacing="6">
+          <VStack align="start" spacing="8">
             <HStack align="start" spacing="4">
               <Icon as={HiLocationMarker} boxSize="6" color={textRed} />
               <Text fontSize="sm">
-                123, XYZ Street, ABC City, 12345, Country
+              31-Ifthikar Building, Bahawal Sher Road, Chauburghi, Lahore, Pakistan, 05488
               </Text>
             </HStack>
 
             <HStack align="start" spacing="4">
               <Icon as={PhoneIcon} boxSize="6" color={textRed} />
-              <Text fontSize="sm">+90 012345677</Text>
+              <Text fontSize="sm">+92 303 7272702</Text>
             </HStack>
 
 
             <HStack align="start" spacing="4">
               <Icon as={EmailIcon} boxSize="6" color={textRed} />
-              <Text fontSize="sm">info@basitenterprises.com</Text>
+              <Text fontSize="sm">Basit@basitenterprise.com</Text>
             </HStack>
 
-            <HStack align="start" spacing="4">
+            {/* <HStack align="start" spacing="4">
               <Icon as={AiOutlineGlobal} boxSize="6" color={textRed} />
               <Text fontSize="sm">
                 For export related enquiries: exports@basitenterprises.com
               </Text>
-            </HStack>
+            </HStack> */}
+           
           </VStack>
         </MotionBox>
 

@@ -8,8 +8,7 @@ const MotionBox = motion(Box);
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // Mobile menu state
-
+  const [isOpen, setIsOpen] = useState(false); 
   const handleScroll = () => {
     setScrolled(window.scrollY > 30);
   };
@@ -49,18 +48,18 @@ const Navbar = () => {
         bg={scrolled ? "rgba(255, 255, 255, 0.36)" : "rgba(0, 0, 0, 0.16)"}
         backdropFilter={scrolled ? "blur(12px)" : "none"}
         transition="all 0.3s ease"
-        px={{ base: "2", md: "8", lg: "16" }} // Reduced padding to avoid overflow
+        px={{ base: "2", md: "8", lg: "16" }}
         py={{ base: "2", md: "4" }} // Adds some padding for better spacing
         alignItems="center"
         justifyContent="space-between"
         boxShadow={scrolled ? "sm" : "none"}
-        zIndex="1000" // Ensures navbar stays above other elements
+        zIndex="1000" 
         overflowX="hidden" // Prevents horizontal scroll issues
       >
         <Image
           src="/logo01-red.png"
           alt="Logo"
-          width={{ base: "100px", md: "80px", lg: "150px" }}
+          width={{ base: "150px", md: "80px", lg: "150px" }}
           height={{ base: "50px", md: "50px", lg: "100px" }}
           objectFit="cover"
           ml={{ base: "0", md: "10", lg: "20" }}
@@ -80,7 +79,8 @@ const Navbar = () => {
               <Link
                 href="#"
                 fontWeight="bold"
-                fontSize="sm"
+                fontSize="lg"
+                
                 textTransform="uppercase"
                 color={scrolled ? "gray.800" : "gray.800"}
                 _hover={{ textDecoration: "none", color: logoInnerRed }}

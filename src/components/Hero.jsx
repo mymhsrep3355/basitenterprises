@@ -18,7 +18,7 @@ const wordVariants = {
 };
 
 const gradientText = {
-  backgroundImage: `url('/pattern.png')`, // Replace with your PNG path
+  backgroundImage: `url('/pattern.png')`, 
   backgroundClip: "text",
   textFillColor: "transparent",
   backgroundSize: "cover",
@@ -27,8 +27,8 @@ const gradientText = {
 };
 
 const wordsLine1 = ["Basit", "Enterprises,"];
-const wordsLine2 = ["Excellence", "in", "Service,"];
-const wordsLine3 = ["Commitment", "to", "Care"];
+const wordsLine2 = ["precision", "in", "care,"];
+const wordsLine3 = ["passion", "in", "health"];
 
 const HeroSection = () => {
   return (
@@ -43,12 +43,12 @@ const HeroSection = () => {
       display="flex"
       justifyContent="flex-end"
       alignItems="center"
-      px={{ base: "6", md: "12", lg: "16" }} // Padding for left alignment
+      px={{ base: "0", md: "12", lg: "16" }}
     >
-      <Flex direction="column" textAlign="left" mt={{ base: 10, md: 10, lg: 16 }}>
-        {/* Line 1 */}
-        <MotionText
-          fontSize={{ base: "3xl", sm: "2xl", md: "5xl" }}
+      {/* <Flex direction="column" textAlign="right" mt={{ base: 10, md: 10, lg: 16 }} bg={"rgba(0, 0, 0, 0.5)"} p={6}> */}
+
+        {/* <MotionText
+          fontSize={{ base: "1xl", sm: "1xl", md: "3xl" }}
           fontWeight="bold"
           lineHeight="1.5"
           sx={gradientText}
@@ -67,11 +67,12 @@ const HeroSection = () => {
               {word}
             </MotionText>
           ))}
-        </MotionText>
+        </MotionText> */}
 
         {/* Line 2 */}
-        <MotionText
-          fontSize={{ base: "3xl", sm: "2xl", md: "5xl" }}
+        {/* <MotionText
+          // fontSize={{ base: "3xl", sm: "2xl", md: "5xl" }}
+          fontSize={{ base: "1xl", sm: "1xl", md: "3xl" }}
           fontWeight="bold"
           lineHeight="1.2"
           sx={gradientText}
@@ -91,11 +92,12 @@ const HeroSection = () => {
               {word}
             </MotionText>
           ))}
-        </MotionText>
+        </MotionText> */}
 
         {/* Line 3 */}
-        <MotionText
-          fontSize={{ base: "3xl", sm: "2xl", md: "5xl" }}
+        {/* <MotionText
+          // fontSize={{ base: "3xl", sm: "2xl", md: "5xl" }}
+          fontSize={{ base: "1xl", sm: "1xl", md: "3xl" }}
           fontWeight="bold"
           lineHeight="1.2"
           sx={gradientText}
@@ -115,8 +117,8 @@ const HeroSection = () => {
               {word}
             </MotionText>
           ))}
-        </MotionText>
-      </Flex>
+        </MotionText> */}
+      {/* </Flex> */}
     </Box>
   );
 };

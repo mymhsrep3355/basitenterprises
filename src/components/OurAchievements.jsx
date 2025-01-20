@@ -13,7 +13,7 @@ const Counter = ({ max, duration }) => {
 
   useEffect(() => {
     let start = 0;
-    const increment = max / (duration * 3000 / 60); // Increment per frame
+    const increment = max / (duration * 4000 / 60); // Increment per frame
     const interval = setInterval(() => {
       start += increment;
       if (start >= max) {
@@ -22,7 +22,7 @@ const Counter = ({ max, duration }) => {
       } else {
         setCount(Math.floor(start));
       }
-    }, 17); // Runs every 16ms (~60fps)
+    }, 20); // Runs every 16ms (~60fps)
     return () => clearInterval(interval);
   }, [max, duration]);
 
@@ -33,17 +33,17 @@ const OurAchievements = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const achievements = [
-    { id: 1, value: 400, label: "Customers" },
-    { id: 2, value: 10, label: "Products" },
-    { id: 3, value: 95, label: "Employees" },
-    { id: 4, value: 100, label: "Happy Pets" },
+    { id: 1, value: 450, label: "Happy Customers" },
+    { id: 2, value: 100, label: "Products" },
+    { id: 3, value: 25, label: "Employees" },
+    { id: 4, value: 10000, label: "Happy Pets" },
   ];
 
   return (
     <Box
       as="section"
       w="full"
-      py={{ base: "8", md: "16" }}
+      py={{ base: "10", md: "16" }}
       px={{ base: "4", md: "10", lg: "20" }}
       bg="black"
       color="white"
@@ -63,11 +63,11 @@ const OurAchievements = () => {
           textAlign="left"
         >
           <Heading size="lg" fontWeight="bold" color="white">
-            Numbers Don't Lie
+            The Numbers Tell Our Story
           </Heading>
           <Box
             h="2px"
-            w="50px"
+            w="280px"
             bg="red.500"
             borderRadius="full"
           ></Box>

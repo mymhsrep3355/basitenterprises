@@ -27,7 +27,7 @@ const OurBrands = () => {
     {
       id: 2,
       name: "Brand 2",
-      logo: "/brand-logos/hermos-siyah-logo.png",
+      logo: "/brand-logos/petvia.png",
       link: "/brand2",
     },
     {
@@ -36,7 +36,7 @@ const OurBrands = () => {
       logo: "/brand-logos/klicker-logo.png",
       link: "/brand3",
     },
-    { id: 4, name: "Brand 4", logo: "/brand-logos/mcl.png", link: "/brand4" },
+    { id: 4, name: "Brand 4", logo: "/brand-logos/petbite.png", link: "/brand4" },
     {
       id: 5,
       name: "Brand 5",
@@ -69,7 +69,6 @@ const OurBrands = () => {
       animate="visible"
       variants={containerVariants}
     >
-      {/* Heading Section */}
       <Heading
         size="lg"
         mb="6"

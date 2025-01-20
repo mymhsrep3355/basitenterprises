@@ -55,39 +55,42 @@ const Footer = () => {
             objectFit="contain"
           />
           <Text fontSize="sm" color="gray.400">
-            Since 1997, Basit Enterprises has been a trusted name in the
-            production and distribution of high-quality pet food and poultry
-            feed. With decades of experience, we are committed to delivering
-            nutritious, reliable, and sustainable feed solutions to ensure the
-            health and growth of your animals.
+            For over three decades, Basit Enterprises has been a family-run
+            business dedicated to improving animal welfare across Pakistan. We
+            proudly offer a diverse range of high-quality and innovative
+            products tailored for pets, poultry, and livestock. Our mission is
+            to enhance the health and well-being of all animals, from household
+            pets to poultry birds and production livestock. With a steadfast
+            commitment to excellence and innovation, we strive to deliver the
+            best solutions in animal care
           </Text>
 
           <VStack align="start" spacing={5} mt={{ base: 6, md: 0 }}>
-          <Text fontWeight="bold" fontSize="lg" mb={1}>
-            Keep in Touch
-          </Text>
-          <Divider borderColor="gray.600" />
-          <HStack spacing={3}>
-            <FaXTwitter size={20} color={textRed} />
-            <Link _hover={{ color: textRed }}>X (Twitter)</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <FacebookOutlined style={{ fontSize: "20px", color: textRed }} />
-            <Link _hover={{ color: textRed }}>Facebook</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <LinkedinOutlined style={{ fontSize: "20px", color: textRed }}  />
-            <Link _hover={{ color: textRed }}>LinkedIn</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <InstagramOutlined style={{ fontSize: "20px", color: textRed }} />
-            <Link _hover={{ color: textRed }}>Instagram</Link>
-          </HStack>
-          <HStack spacing={3}>
-            <YoutubeOutlined style={{ fontSize: "20px", color: textRed }} />
-            <Link _hover={{ color: textRed }}>YouTube</Link>
-          </HStack>
-        </VStack>
+            <Text fontWeight="bold" fontSize="lg" mb={1}>
+              Keep in Touch
+            </Text>
+            <Divider borderColor="gray.600" />
+            <HStack spacing={3}>
+              <FaXTwitter size={20} color={textRed} />
+              <Link _hover={{ color: textRed }}>X (Twitter)</Link>
+            </HStack>
+            <HStack spacing={3}>
+              <FacebookOutlined style={{ fontSize: "20px", color: textRed }} />
+              <Link _hover={{ color: textRed }}>Facebook</Link>
+            </HStack>
+            <HStack spacing={3}>
+              <LinkedinOutlined style={{ fontSize: "20px", color: textRed }} />
+              <Link _hover={{ color: textRed }}>LinkedIn</Link>
+            </HStack>
+            <HStack spacing={3}>
+              <InstagramOutlined style={{ fontSize: "20px", color: textRed }} />
+              <Link _hover={{ color: textRed }}>Instagram</Link>
+            </HStack>
+            <HStack spacing={3}>
+              <YoutubeOutlined style={{ fontSize: "20px", color: textRed }} />
+              <Link _hover={{ color: textRed }}>YouTube</Link>
+            </HStack>
+          </VStack>
         </VStack>
 
         <VStack
@@ -235,7 +238,7 @@ const Footer = () => {
             <Link fontSize="sm" fontWeight="bold" _hover={{ color: "red.500" }}>
               Cat Expo India 23rd June 2024
             </Link>
-          {/* <Divider borderColor="gray.600" w={"100%"} /> */}
+            {/* <Divider borderColor="gray.600" w={"100%"} /> */}
           </VStack>
 
           <VStack align="start" spacing={2} mt={4} width="100%">
@@ -254,8 +257,6 @@ const Footer = () => {
             </Link>
           </VStack>
         </VStack>
-
-        
       </Flex>
 
       {/* <Divider my={6} borderColor="gray.600" /> */}

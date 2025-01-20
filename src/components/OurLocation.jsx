@@ -82,7 +82,7 @@ const OurLocation = () => {
       {/* Google Map */}
       <MotionBox
         w="full"
-        h={{ base: "300px", md: "400px", lg: "500px" }}
+        h={{ base: "300px", md: "400px", lg: "400px" }}
         // borderRadius="md"
         overflow="hidden"
         boxShadow="lg"

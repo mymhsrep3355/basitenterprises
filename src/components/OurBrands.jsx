@@ -12,53 +12,62 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import CustomButton from "./CustomButton";
 import { textRed, logoInnerRed } from "../constants.js";
+import Banner from "./BannerHeading.jsx";
+// import bannerImg from "../../public/cat-banner.png"
 
 // Motion component
 const MotionBox = motion(Box);
 
-const OurBrands = () => {
-  const brands = [
-    {
-      id: 1,
-      name: "Brand 1",
-      logo: "/brand-logos/benefit-logo.png",
-      link: "/brand1",
-    },
-    {
-      id: 2,
-      name: "Brand 2",
-      logo: "/brand-logos/petvia.png",
-      link: "/brand2",
-    },
-    {
-      id: 3,
-      name: "Brand 3",
-      logo: "/brand-logos/klicker-logo.png",
-      link: "/brand3",
-    },
-    {
-      id: 4,
-      name: "Brand 4",
-      logo: "/brand-logos/petbite.png",
-      link: "/brand4",
-    },
-    {
-      id: 5,
-      name: "Brand 5",
-      logo: "/brand-logos/pawpaw-logo-guncel.png",
-      link: "/brand5",
-    },
-    { id: 6, name: "Brand 6", logo: "/polutary/brand1.png", link: "/brand6" },
-    { id: 7, name: "Brand 7", logo: "/polutary/brand2.png", link: "/brand7" },
-    { id: 8, name: "Brand 8", logo: "/polutary/brand3.png", link: "/brand8" },
-    { id: 9, name: "Brand 9", logo: "/polutary/brand4.png", link: "/brand9" },
-    {
-      id: 10,
-      name: "Brand 10",
-      logo: "/polutary/brand5.png",
-      link: "/brand10",
-    },
-  ];
+const OurBrands = ({brands}) => {
+  // const brands = [
+  //   {
+  //     id: 1,
+  //     name: "Brand 1",
+  //     logo: "/brand-logos/benefit-logo.png",
+  //     link: "/brand1",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Brand 2",
+  //     logo: "/brand-logos/petvia.png",
+  //     link: "/brand2",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Brand 3",
+  //     logo: "/brand-logos/klicker-logo.png",
+  //     link: "/brand3",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Brand 4",
+  //     logo: "/brand-logos/petbite.png",
+  //     link: "/brand4",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Brand 5",
+  //     logo: "/brand-logos/pawpaw-logo-guncel.png",
+  //     link: "/brand5",
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "Brand 6",
+  //     logo:"/brand-logos/cat-litter.png",
+  //     link: "/brand6",
+  //   }
+
+  //   // { id: 6, name: "Brand 6", logo: "/polutary/brand1.png", link: "/brand6" },
+  //   // { id: 7, name: "Brand 7", logo: "/polutary/brand2.png", link: "/brand7" },
+  //   // { id: 8, name: "Brand 8", logo: "/polutary/brand3.png", link: "/brand8" },
+  //   // { id: 9, name: "Brand 9", logo: "/polutary/brand4.png", link: "/brand9" },
+  //   // {
+  //   //   id: 10,
+  //   //   name: "Brand 10",
+  //   //   logo: "/polutary/brand5.png",
+  //   //   link: "/brand10",
+  //   // },
+  // ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleItems = 5;
@@ -78,6 +87,8 @@ const OurBrands = () => {
   const visibleBrands = brands.slice(currentIndex, currentIndex + visibleItems);
 
   return (
+    <>
+    {/* <Banner heading={"Our Pet Food Brands"} rightImage={'/cats-banner.png'}/> */}
     <MotionBox
       as="section"
       w="full"
@@ -103,17 +114,6 @@ const OurBrands = () => {
         },
       }}
     >
-      <Heading
-        size="lg"
-        mb="6"
-        fontWeight="bold"
-        bgGradient="linear(to-r, red.600, red.400)"
-        bgClip="text"
-      >
-        Our Brands
-      </Heading>
-      <Box h="2px" w="50px" bg="red.500" mb="6" borderRadius="full" />
-
       <Box position="relative" w="full" maxW="7xl" overflow="hidden">
         <HStack
           spacing={{ base: "20px", sm: "10px", md: "20px", lg: "40px" }}
@@ -186,6 +186,7 @@ const OurBrands = () => {
         </CustomButton>
       </Box>
     </MotionBox>
+    </>
   );
 };
 

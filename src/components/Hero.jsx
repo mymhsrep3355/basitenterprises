@@ -35,7 +35,7 @@ const HeroSection = () => {
     <Box
       as="section"
       w="100%"
-      h={{ base: "80vh", sm: "35vh", md: "70vh", lg: "65vh" }}
+      h={{ base: "55vh", sm: "35vh", md: "65vh", lg: "80vh" }}
       bgImage="url('https://images.unsplash.com/photo-1524060814534-c8540185978d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
       bgSize="cover"
       bgPosition="center"

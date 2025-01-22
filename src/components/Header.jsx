@@ -2,14 +2,17 @@ import React from "react";
 import { Box, Flex, Text, Icon, useBreakpointValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdEmail, MdPhone } from "react-icons/md";
-import { logoInnerRed } from "../constants"; 
+import { logoInnerRed } from "../constants";
 
 const MotionFlex = motion(Flex);
 
 const Header = () => {
-  
   const fontSize = useBreakpointValue({ base: "xs", md: "sm" });
-  const flexDirection = useBreakpointValue({ base: "row", md: "row", sm: "column" });
+  const flexDirection = useBreakpointValue({
+    base: "row",
+    md: "row",
+    sm: "column",
+  });
 
   return (
     <MotionFlex
@@ -19,7 +22,7 @@ const Header = () => {
       bg={logoInnerRed}
       w="full"
       p={{ base: 1, md: 4 }}
-      justify={'right'}
+      justify={"right"}
       align="end"
       flexDirection={flexDirection}
       textAlign="end"
@@ -27,16 +30,15 @@ const Header = () => {
       <Flex align="end" mr={{ base: 0, md: 4 }} mb={{ base: 1, md: 0 }}>
         <Icon as={MdPhone} color="white" boxSize={{ base: 4, md: 5 }} />
         <Text fontSize={fontSize} color="white" ml={2}>
-          +92 300 1234567
+          +92 303 7272702
         </Text>
       </Flex>
       <Flex align="end" mr={{ base: 0, md: 4 }} mb={{ base: 1, md: 0 }}>
         <Icon as={MdEmail} color="white" boxSize={{ base: 4, md: 5 }} />
         <Text fontSize={fontSize} color="white" ml={2}>
-          info.basit@gmail.com
+          basit@basitenterprise.com
         </Text>
       </Flex>
-
     </MotionFlex>
   );
 };

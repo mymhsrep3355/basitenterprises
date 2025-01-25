@@ -23,8 +23,6 @@ const Navbar = () => {
   const links = [
     "About Us",
     "Our Brands",
-    "Products",
-    "Services",
     "Contact",
     "Clients",
   ];

@@ -37,7 +37,7 @@ const HeroSection = () => {
   // Function to scroll down the page
   const scrollDown = () => {
     window.scrollBy({
-      top: window.innerHeight * 0.8, // Scrolls down 80% of the viewport height
+      top: window.innerHeight * 0.99, // Scrolls down 80% of the viewport height
       behavior: "smooth",
     });
   };

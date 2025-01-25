@@ -1,8 +1,11 @@
 import React from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, IconButton } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 
-const MotionText = motion(Text);
+
+const MotionText = motion(Flex);
 
 const textContainerVariants = {
   hidden: { opacity: 0 },
@@ -18,7 +21,7 @@ const wordVariants = {
 };
 
 const gradientText = {
-  backgroundImage: `url('/pattern.png')`, 
+  backgroundImage: `url('/pattern.png')`,
   backgroundClip: "text",
   textFillColor: "transparent",
   backgroundSize: "cover",
@@ -31,6 +34,14 @@ const wordsLine2 = ["precision", "in", "care,"];
 const wordsLine3 = ["passion", "in", "health"];
 
 const HeroSection = () => {
+  // Function to scroll down the page
+  const scrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight * 0.8, // Scrolls down 80% of the viewport height
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Box
       as="section"
@@ -44,10 +55,11 @@ const HeroSection = () => {
       justifyContent="flex-end"
       alignItems="center"
       px={{ base: "0", md: "12", lg: "16" }}
+      position="relative"
     >
       {/* <Flex direction="column" textAlign="right" mt={{ base: 10, md: 10, lg: 16 }} bg={"rgba(0, 0, 0, 0.5)"} p={6}> */}
 
-        {/* <MotionText
+      {/* <MotionText
           fontSize={{ base: "1xl", sm: "1xl", md: "3xl" }}
           fontWeight="bold"
           lineHeight="1.5"
@@ -69,8 +81,8 @@ const HeroSection = () => {
           ))}
         </MotionText> */}
 
-        {/* Line 2 */}
-        {/* <MotionText
+      {/* Line 2 */}
+      {/* <MotionText
           // fontSize={{ base: "3xl", sm: "2xl", md: "5xl" }}
           fontSize={{ base: "1xl", sm: "1xl", md: "3xl" }}
           fontWeight="bold"
@@ -94,8 +106,8 @@ const HeroSection = () => {
           ))}
         </MotionText> */}
 
-        {/* Line 3 */}
-        {/* <MotionText
+      {/* Line 3 */}
+      {/* <MotionText
           // fontSize={{ base: "3xl", sm: "2xl", md: "5xl" }}
           fontSize={{ base: "1xl", sm: "1xl", md: "3xl" }}
           fontWeight="bold"
@@ -119,6 +131,33 @@ const HeroSection = () => {
           ))}
         </MotionText> */}
       {/* </Flex> */}
+
+      {/* Down Arrow Button */}
+      <IconButton
+        onClick={scrollDown}
+        aria-label="Scroll down"
+        icon={<MdOutlineKeyboardDoubleArrowDown  size={20} />}
+        position="absolute"
+        bottom="20px"
+        left="50%"
+        transform="translateX(-50%)"
+        size={"lg"}
+        width={16}
+        borderRadius="full"
+        bg="red.500" // Changed background color to red
+        color="white" // Adjusted icon color to white
+        _hover={{
+          bg: "red.600", // Darker red on hover
+          transform: "translateX(-50%) translateY(10px) scale(1.1)", // Bouncy effect towards down
+          transition: "all 0.3s ease-in-out", // Smooth transition
+        }}
+        _active={{
+          bg: "red.700", // Darker red on active
+          transform: "translateX(-50%) translateY(5px)", // Slightly less bouncy when clicked
+          transition: "all 0.2s ease-in-out",
+        }}
+        boxShadow="xl" // Larger shadow for emphasis
+      />
     </Box>
   );
 };

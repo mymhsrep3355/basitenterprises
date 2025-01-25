@@ -101,7 +101,7 @@ const Footer = () => {
           width="100%"
         >
           {[
-            { title: "Home", subLinks: [] },
+            // { title: "Home", subLinks: [] },
             {
               title: "About Us",
               subLinks: [
@@ -212,19 +212,22 @@ const Footer = () => {
         {/* news */}
 
         <VStack
-          align="start"
+          align="end"
           ml={2}
           flex="1"
           mt={{ base: 6, md: 0 }}
           width="100%"
           // mr={12}
+          // border={
+          //   "1px solid rgba(255, 255, 255, 0.2)" /* "1px solid rgba(255, 255, 255, 0.2)" */
+          // }
         >
           <Text fontWeight="bold" fontSize="lg">
-            Latest News
+            Recent Blogs
           </Text>
 
           {/* News Item 1 */}
-          <VStack align="start" spacing={2} mt={4} width="100%">
+          <VStack align="end" spacing={2} mt={4} width="100%">
             <Image
               src="https://images.unsplash.com/photo-1580230273693-c83dfa2b9bac?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               width="100%"
@@ -241,7 +244,7 @@ const Footer = () => {
             {/* <Divider borderColor="gray.600" w={"100%"} /> */}
           </VStack>
 
-          <VStack align="start" spacing={2} mt={4} width="100%">
+          <VStack align="end" spacing={2} mt={4} width="100%">
             <Image
               src="https://images.unsplash.com/photo-1726245219440-37d541ac3db8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               width="100%"

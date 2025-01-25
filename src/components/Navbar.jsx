@@ -24,7 +24,7 @@ const Navbar = () => {
     "About Us",
     "Our Brands",
     "Contact",
-    "Clients",
+    "Blogs",
   ];
 
   return (

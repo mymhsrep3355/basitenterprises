@@ -12,6 +12,7 @@ import OurAchievements from "../../components/OurAchievements";
 import Banner from "../../components/BannerHeading";
 import AboutUs from "../../components/AboutUs";
 import AboutUsHeader from "../../components/AboutUsHeader";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const Landing = () => {
   const brandsFood = [
@@ -73,10 +74,10 @@ const Landing = () => {
       display="flex"
       flexDirection="column"
     >
-      <Header />
+      {/* <Header /> */}
       <Navbar />
       <HeroSection />
-      <AboutUsHeader/>
+      <AboutUsHeader id="about-us"/>
       <AboutUs
         textImage="/cat.png"
         heading="Our love of pets"
@@ -105,17 +106,17 @@ const Landing = () => {
         mainImage="https://images.unsplash.com/photo-1653209067175-46985fcd3ee2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         reverse={false}
       />
-      <Banner heading={"Our Pet Food Brands"} rightImage={"/cats-banner.png"} />
+      <Banner id="our-brands" heading={"Our Pet Food Brands"} rightImage={"/cats-banner.png"} />
       <OurBrands brands={brandsFood} />
       <Banner heading={"Our Poultry Brands"} rightImage={"/dogs.png"} />
       <OurBrands brands={brandsPolutay} />
       <OurAchievements />
-      <ContactUs />
-      {/* <Box h="1px" bg="red.500" /> */}
+      <ContactUs id="contact-us" />
       <OurLocation />
       <Flex flex="1" />
       <Footer />
       <Footnote />
+      <ScrollToTop/>
     </Box>
   );
 };

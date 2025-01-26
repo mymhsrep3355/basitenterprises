@@ -103,29 +103,35 @@ const Footer = () => {
           {[
             // { title: "Home", subLinks: [] },
             {
-              title: "About Us",
+              title: "General",
               subLinks: [
-                "Our History",
+                "About Us",
                 "Unique Ingredients",
                 "Production & Packaging",
                 "Quality Control",
-                "B2C E-Commerce Model",
+                "Whats New",
               ],
             },
-            { title: "Our Nutrition Philosophy", subLinks: [] },
+            { title: "Pet Food Brands", subLinks: [] },
             {
-              title: "Our Brands",
+              title: "Premium Brands",
               subLinks: [
-                { category: "Super Premium", links: ["Bonacibo"] },
+                { category: "Premium", links: ["Paw Paw"] },
                 {
                   category: "Premium",
-                  links: ["Micho", "Kucho", "La Mito", "Kennel"],
+                  links: ["Petbite"],
                 },
-                { links: ["temizmama.com"] },
+                {
+                  category: "Super Premium",
+                  links: ['Petiva'],
+                }
               ],
             },
-            { title: "News", subLinks: [] },
-            { title: "Contact Us", subLinks: [] },
+            { title: "VetFood", subLinks: ['Benefit'] },
+            { title: "Grain Free", subLinks: ['Klicker'] },
+            { title: "Premium Cat Litter", subLinks: ['Catterlitter'] },
+            { title: "Poultry Brands", subLinks: ['Hilton','Aptly','Zoic','Univet','Selmore'] },
+            {title: "Contact Us", subLinks: []},
           ].map((section, idx) => (
             <React.Fragment key={section.title}>
               <HStack

@@ -77,36 +77,34 @@ const Landing = () => {
       {/* <Header /> */}
       <Navbar />
       <HeroSection />
-      <AboutUsHeader id="about-us"/>
+      <AboutUsHeader id="about-us" />
       <AboutUs
         textImage="/cat.png"
-        heading="Our love of pets"
-        description="We put lots of expertise into manufacturing our premium cat food so
-        that all our feline friends can spend long, happy and healthy lives
-        by our sides. We draw upon our long-standing experience and skill to
-        create perfect recipes using natural ingredients. These supply your
-        cat with the basis for a happy life full of vitality. And her special
-        needs are covered – naturally. So your little gourmet can be sure of
-        eating the right food for a long and healthy life."
+        heading={'A Vision for a Healthier Tomorrow'}
+        description="We believe that healthier animals lead to healthier communities. This philosophy drives us to continuously innovate, collaborate, and expand our reach across Pakistan, partnering with farmers, veterinarians, and pet owners to create a brighter future for all."
         mainImage="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         reverse={false}
       />
       <AboutUs
         textImage="/sitting.png"
-        heading="Precision in Care"
-        description="At the heart of everything we do is a commitment to the precise care and well-being of your beloved pets. We meticulously craft recipes that cater to their unique nutritional needs, using only high-quality, natural ingredients. Our approach ensures every meal contributes to their vitality, happiness, and overall health. With our expertise, your furry companions can enjoy a balanced diet tailored just for them, allowing them to thrive and live their best lives by your side."
+        heading="Driven by Expertise, Guided by Care"
+        description="Our journey is fueled by decades of expertise and a deep understanding of animal health. Whether it’s preventing disease in poultry or providing pets with the best nutrition, we are relentless in our pursuit of solutions that make a real difference. Every product is a reflection of our promise: uncompromising quality and care for the animals you love."
         mainImage="https://images.unsplash.com/photo-1607163365613-c281acde5012?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         reverse={true}
       />
 
       <AboutUs
         textImage="/poultry.png"
-        heading="Passion in Health"
-        description="Our passion for health drives everything we do. We believe in creating products that promote the long-term well-being of your pets, combining natural ingredients with innovative formulations. Each recipe is designed with care to support a healthy lifestyle, ensuring your furry friends remain active, happy, and full of vitality. With our dedication to their health, you can trust us to provide the best nutrition for a lifetime of wellness."
+        heading="Health Beyond Boundaries"
+        description="We strive to deliver excellence in every product we offer. From nutraceuticals and vaccines to premium pet food and high-quality cat litter, we bring global innovations to the local market. By combining imported solutions with locally manufactured products, we ensure that every animal, regardless of their environment, gets the care they deserve."
         mainImage="https://images.unsplash.com/photo-1653209067175-46985fcd3ee2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         reverse={false}
       />
-      <Banner id="our-brands" heading={"Our Pet Food Brands"} rightImage={"/cats-banner.png"} />
+      <Banner
+        id="our-brands"
+        heading={"Our Pet Food Brands"}
+        rightImage={"/cats-banner.png"}
+      />
       <OurBrands brands={brandsFood} />
       <Banner heading={"Our Poultry Brands"} rightImage={"/dogs.png"} />
       <OurBrands brands={brandsPolutay} />
@@ -116,7 +114,7 @@ const Landing = () => {
       <Flex flex="1" />
       <Footer />
       <Footnote />
-      <ScrollToTop/>
+      <ScrollToTop />
     </Box>
   );
 };

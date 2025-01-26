@@ -5,7 +5,7 @@ const AboutUsHeader = () => {
   return (
     <Box
       w="100%"
-      h="400px" 
+      h="400px"
       position="relative"
       bgImage="url('https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" // Replace with your image URL
       bgSize="cover"
@@ -27,7 +27,7 @@ const AboutUsHeader = () => {
         align="center"
         justify="center"
         position="relative"
-        zIndex={2} 
+        zIndex={2}
         h="100%"
         textAlign="center"
         px={4}
@@ -35,7 +35,7 @@ const AboutUsHeader = () => {
         <Heading
           as="h1"
           fontSize={{ base: "3xl", md: "5xl" }}
-          fontFamily="'Meow Script', cursive" 
+          fontFamily="'Meow Script', cursive"
           color="red.600" // Match the text color from the reference
         >
           Crafting Wellness with Precision and Passion
@@ -47,7 +47,7 @@ const AboutUsHeader = () => {
           color="gray.700"
           fontWeight="medium"
         >
-          Because only healthy cats are happy cats
+          Building a Healthier Future for Every Animal, Every Day
         </Heading>
         <Text
           fontSize={{ base: "sm", md: "md" }}
@@ -55,11 +55,11 @@ const AboutUsHeader = () => {
           color="gray.600"
           maxW="800px"
         >
-          Today a good cat food must do much more than fill your feline friend’s
-          tummy. More importantly, the food must be tasty and healthy. This is
-          why we have been developing and refining exquisite recipes for our
-          healthy pet food for many years. And in doing this we pursue the
-          following values:
+          For over three decades, we have been committed to advancing animal
+          health and well-being through premium-quality products and unmatched
+          expertise. Our mission is simple yet profound: to ensure that every
+          animal, whether in the poultry industry or a beloved household pet,
+          thrives with vitality, health and happiness.
         </Text>
       </VStack>
     </Box>

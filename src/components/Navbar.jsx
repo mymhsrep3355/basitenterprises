@@ -246,7 +246,8 @@ const Navbar = () => {
               <Link
                 onClick={() => scrollToSection(link.id)}
                 fontWeight={500}
-                fontStyle={'Poppins'}
+                // fontStyle={'Poppins'}
+                fontFamily={'Poppins'}
                 fontSize="xl"
                 textTransform="uppercase"
                 color={scrolled ? "gray.800" : "gray.800"}
@@ -302,6 +303,7 @@ const Navbar = () => {
               onClick={() => scrollToSection(link.id)}
               fontWeight="bold"
               fontSize="lg"
+              fontFamily={'Poppins'}
               textTransform="uppercase"
               color="gray.800"
               _hover={{ color: "red.500" }}

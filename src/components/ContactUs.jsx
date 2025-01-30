@@ -43,6 +43,7 @@ const ContactUs = () => {
         justifyContent="space-between"
         gap="14" 
         align="flex-start"
+        
       >
         
         <MotionBox
@@ -50,40 +51,41 @@ const ContactUs = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
+          // transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Box
-            bg={textRed}
+             bg="black"
             color="white"
-            px="4"
+            px="8"
             py="6"
             display="inline-block"
             mb="6"
           >
-            <Heading size="sm" fontWeight="bold">
+            <Heading size="lg" fontWeight="bold" fontFamily="'Poppins', sans-serif">
               Contact Us
             </Heading>
           </Box>
-          <Heading size="lg" mb="4" fontWeight="bold">
+          <Heading size="lg" mb="4" fontWeight="bold" fontFamily="'Poppins', sans-serif">
             Basit Enterprises
           </Heading>
-          <Box h="2px" w="50px" bg="red.500" mb="6" borderRadius="full" />
+          <Box h="2px" w="145px" bg="red.500" mb="6" borderRadius="full" />
           <VStack align="start" spacing="8">
             <HStack align="start" spacing="4">
               <Icon as={HiLocationMarker} boxSize="6" color={textRed} />
-              <Text fontSize="sm">
+              <Text fontSize="md">
               31-Ifthikar Building, Bahawal Sher Road, Chauburghi, Lahore, Pakistan, 05488
               </Text>
             </HStack>
 
             <HStack align="start" spacing="4">
               <Icon as={PhoneIcon} boxSize="6" color={textRed} />
-              <Text fontSize="sm">+92 303 7272702</Text>
+              <Text fontSize="md">+92 303 7272702</Text>
             </HStack>
 
 
             <HStack align="start" spacing="4">
               <Icon as={EmailIcon} boxSize="6" color={textRed} />
-              <Text fontSize="sm">Basit@basitenterprise.com</Text>
+              <Text fontSize="md">Basit@basitenterprise.com</Text>
             </HStack>
 
             {/* <HStack align="start" spacing="4">
@@ -104,21 +106,22 @@ const ContactUs = () => {
           animate={inView ? "visible" : "hidden"}
         >
           <Box
-            bg="black"
+            bg={textRed}
             color="white"
-            px="4"
+           
+            px="8"
             py="6"
             display="inline-block"
             mb="6"
           >
-            <Heading size="sm" fontWeight="bold">
+            <Heading size="lg" fontWeight="bold" fontFamily="'Poppins', sans-serif">
               Contact Form
             </Heading>
           </Box>
           <VStack align="start" spacing="6">
 
             <Box w="full">
-              <Text mb="2" fontSize="sm" color="gray.600" fontWeight={500}>
+              <Text mb="2" fontSize="md" color="gray.600" fontWeight={500}>
                 Your Name *
               </Text>
               <Input
@@ -133,7 +136,7 @@ const ContactUs = () => {
 
 
             <Box w="full">
-              <Text mb="2" fontSize="sm" color="gray.600" fontWeight={500}>
+              <Text mb="2" fontSize="md" color="gray.600" fontWeight={500}>
                 Your Email *
               </Text>
               <Input
@@ -149,7 +152,7 @@ const ContactUs = () => {
 
 
             <Box w="full">
-              <Text mb="2" fontSize="sm" color="gray.600"  fontWeight={500}>
+              <Text mb="2" fontSize="md" color="gray.600"  fontWeight={500}>
                 Your Message *
               </Text>
               <Textarea

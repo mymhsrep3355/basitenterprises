@@ -80,7 +80,7 @@ const Landing = () => {
       <AboutUsHeader id="about-us" />
       <AboutUs
         textImage="/cat.png"
-        heading={'A Vision for a Healthier Tomorrow'}
+        heading={"A Vision for a Healthier Tomorrow"}
         description="We believe that healthier animals lead to healthier communities. This philosophy drives us to continuously innovate, collaborate, and expand our reach across Pakistan, partnering with farmers, veterinarians, and pet owners to create a brighter future for all."
         mainImage="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         reverse={false}
@@ -95,18 +95,21 @@ const Landing = () => {
 
       <AboutUs
         textImage="/poultry.png"
-        heading="Health Beyond Boundaries"
-        description="We strive to deliver excellence in every product we offer. From nutraceuticals and vaccines to premium pet food and high-quality cat litter, we bring global innovations to the local market. By combining imported solutions with locally manufactured products, we ensure that every animal, regardless of their environment, gets the care they deserve."
-        mainImage="https://images.unsplash.com/photo-1653209067175-46985fcd3ee2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        heading="Delivering Excellence in Animal Health"
+        description="At Basit Enterprises, we specialize in providing comprehensive animal health solutions, focusing on poultry nutraceuticals, a wide range of antibiotics, disinfectants, vitamin-mineral premixes, and broiler vaccines. Our commitment to animal health is reflected in our diverse product offerings designed to enhance the wellbeing of poultry birds across Pakistan. We proudly supply these medicines to hundreds of broiler farmers throughout Punjab, ensuring that they have access to the high-quality products needed to maintain and improve the health of their flocks."
+        // mainImage="https://images.unsplash.com/photo-1653209067175-46985fcd3ee2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        mainImage={
+          "https://img.freepik.com/free-photo/close-up-young-chicken-farming-space_329181-15957.jpg?t=st=1738270657~exp=1738274257~hmac=a2a3265686d6a5d46d6807cc89412238b0c2516fb40726e042773fc834048e46&w=360"
+        }
         reverse={false}
       />
       <Banner
         id="our-brands"
         heading={"Our Pet Food Brands"}
-        rightImage={"/cats-banner.png"}
+        rightImage={"/cat-dog.png"}
       />
       <OurBrands brands={brandsFood} />
-      <Banner heading={"Our Poultry Brands"} rightImage={"/dogs.png"} />
+      <Banner heading={"Our Poultry Brands"} rightImage={"/chicks-hen.png"} />
       <OurBrands brands={brandsPolutay} />
       <OurAchievements />
       <ContactUs id="contact-us" />

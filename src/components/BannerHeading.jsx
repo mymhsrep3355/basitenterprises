@@ -100,7 +100,7 @@ const Banner = ({ heading, rightImage }) => {
         <MotionImage
           src={rightImage}
           alt="Right Image"
-          maxH="150px"
+          maxH="170px"
           objectFit="contain"
           ml={{ base: "0", md: "20px" }}
           initial={{ scale: 0.8, opacity: 0 }} // Shrink and fade

@@ -54,7 +54,7 @@ const Footer = () => {
             maxW="300px"
             objectFit="contain"
           />
-          <Text fontSize="sm" color="gray.400">
+          <Text fontSize="md" color="gray.400" textAlign="justify" fontFamily={'Poppins'}>
             For over three decades, Basit Enterprises has been a family-run
             business dedicated to improving animal welfare across Pakistan. We
             proudly offer a diverse range of high-quality and innovative
@@ -65,7 +65,7 @@ const Footer = () => {
             best solutions in animal care
           </Text>
 
-          <VStack align="start" spacing={5} mt={{ base: 6, md: 0 }}>
+          <VStack align="start" spacing={5} mt={{ base: 6, md: 0 }} fontFamily={'Poppins'} flexFlow={'column'}>
             <Text fontWeight="bold" fontSize="lg" mb={1}>
               Keep in Touch
             </Text>
@@ -99,6 +99,7 @@ const Footer = () => {
           flex="1"
           mt={{ base: 6, md: 0 }}
           width="100%"
+          fontFamily={'Poppins'}
         >
           {[
             // { title: "Home", subLinks: [] },
@@ -114,10 +115,10 @@ const Footer = () => {
             },
             { title: "Pet Food Brands", subLinks: [] },
             {
-              title: "Premium Brands",
-              subLinks: [
-                { category: "Premium", links: ["Paw Paw"] },
-                {
+                title: "Premium Brands",
+                subLinks: [
+                    { category: "Premium", links: ["Paw Paw"] },
+                    {
                   category: "Premium",
                   links: ["Petbite"],
                 },
@@ -130,8 +131,10 @@ const Footer = () => {
             { title: "VetFood", subLinks: ['Benefit'] },
             { title: "Grain Free", subLinks: ['Klicker'] },
             { title: "Premium Cat Litter", subLinks: ['Catterlitter'] },
-            { title: "Poultry Brands", subLinks: ['Hilton','Aptly','Zoic','Univet','Selmore'] },
+            { title: "Poultry Brands", subLinks: [] },
             {title: "Contact Us", subLinks: []},
+
+            // 'Hilton','Aptly','Zoic','Univet','Selmore'
           ].map((section, idx) => (
             <React.Fragment key={section.title}>
               <HStack
@@ -235,7 +238,7 @@ const Footer = () => {
           {/* News Item 1 */}
           <VStack align="end" spacing={2} mt={4} width="100%">
             <Image
-              src="https://images.unsplash.com/photo-1580230273693-c83dfa2b9bac?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/golden-bengal.png"
               width="100%"
               maxW="300px"
               //   borderRadius="md"
@@ -245,7 +248,7 @@ const Footer = () => {
               28 June 2024
             </Text>
             <Link fontSize="sm" fontWeight="bold" _hover={{ color: "red.500" }}>
-              Cat Expo India 23rd June 2024
+              Cat Health and Nutrition By Dr.Basit
             </Link>
             {/* <Divider borderColor="gray.600" w={"100%"} /> */}
           </VStack>
@@ -262,7 +265,7 @@ const Footer = () => {
               3 June 2024
             </Text>
             <Link fontSize="sm" fontWeight="bold" _hover={{ color: "red.500" }}>
-              My Cat Expo Malaysia 8-10 March 2024
+              Why Pet shows are important for your pets
             </Link>
           </VStack>
         </VStack>

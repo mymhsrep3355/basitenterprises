@@ -35,7 +35,7 @@ const OurAchievements = () => {
   const achievements = [
     { id: 1, value: 450, label: "Happy Customers" },
     { id: 2, value: 100, label: "Products" },
-    { id: 3, value: 25, label: "Employees" },
+    { id: 3, value: 60, label: "Farms Served" },
     { id: 4, value: 10000, label: "Happy Pets" },
   ];
 

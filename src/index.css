@@ -103,14 +103,14 @@ html {
 
 /* WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 10px !important; /* Adjust scrollbar width */
+  width: 20px !important; /* Adjust scrollbar width */
   height: 10px !important; /* For horizontal scrollbars */
 }
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-  background: #f4f4f4 !important; /* Light background */
-  border-radius: 10px !important;
+  background: #643636 !important; /* Light background */
+  border-radius: 20px !important;
 }
 
 /* Scrollbar Thumb (Draggable Part) */

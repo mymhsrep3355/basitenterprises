@@ -108,9 +108,9 @@ const Landing = () => {
         heading={"Our Pet Food Brands"}
         rightImage={"/cat-dog.png"}
       />
-      <OurBrands brands={brandsFood} />
+      <OurBrands brands={brandsFood} direction="right" />
       <Banner heading={"Our Poultry Brands"} rightImage={"/chicks-hen.png"} />
-      <OurBrands brands={brandsPolutay} />
+      <OurBrands brands={brandsPolutay} direction="left" />
       <OurAchievements />
       <ContactUs id="contact-us" />
       <OurLocation />

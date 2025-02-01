@@ -201,26 +201,35 @@ import { motion, useAnimation } from "framer-motion";
 // Motion component
 const MotionBox = motion(Box);
 
-const OurBrands = ({ brands }) => {
+const OurBrands = ({ brands, direction = "right" }) => {
   const controls = useAnimation();
   const sliderRef = useRef(null);
 
-  // Dynamically adjust image size and number of visible items based on screen size
-  const imageSize = useBreakpointValue({ base: "120px", sm: "140px", md: "160px", lg: "180px" });
-  const visibleItems = useBreakpointValue({ base: 3, sm: 4, md: 5, lg: 6 });
+  // Dynamically adjust image size based on screen size
+  const imageSize = useBreakpointValue({
+    base: "120px",
+    sm: "140px",
+    md: "160px",
+    lg: "180px",
+  });
 
   // Duplicate brands for seamless infinite loop
   const brandList = [...brands, ...brands];
 
-  // Function to start infinite scrolling
+  // Determine animation values based on direction
+  const isRightToLeft = direction === "right";
+  const startX = isRightToLeft ? "0%" : "-100%";
+  const endX = isRightToLeft ? "-100%" : "0%";
+
+  // Start infinite scrolling
   const startScrolling = async () => {
     if (!sliderRef.current) return;
 
     await controls.start({
-      x: ["0%", "-100%"], // Moves logos from right to left
+      x: [startX, endX], // Moves based on direction
       transition: {
         ease: "linear",
-        duration: 15, // Adjust speed for smooth animation
+        duration: 30, // Adjust speed for smooth animation
         repeat: Infinity,
       },
     });
@@ -228,7 +237,7 @@ const OurBrands = ({ brands }) => {
 
   useEffect(() => {
     startScrolling();
-  }, []);
+  }, [direction]); // Restart animation if direction changes
 
   return (
     <Box w="full" py="12" px="6" textAlign="center" overflow="hidden" position="relative">
@@ -243,12 +252,7 @@ const OurBrands = ({ brands }) => {
         {brandList.map((brand, index) => (
           <Link key={`${brand.id}-${index}`} href={brand.link} isExternal _hover={{ textDecoration: "none" }}>
             <Flex flexDirection="column" alignItems="center" transition="transform 0.3s ease" _hover={{ transform: "scale(1.1)" }}>
-              <Image
-                src={brand.logo}
-                alt={brand.name}
-                boxSize={imageSize}
-                objectFit="contain"
-              />
+              <Image src={brand.logo} alt={brand.name} boxSize={imageSize} objectFit="contain" />
             </Flex>
           </Link>
         ))}

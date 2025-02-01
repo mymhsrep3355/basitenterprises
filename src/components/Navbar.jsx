@@ -224,7 +224,7 @@ const Navbar = () => {
       >
         {/* Logo */}
         <Image
-          src="/logo01-red.png"
+          src="/logo1.png"
           alt="Logo"
           width={{ base: "120px", md: "150px" }}
           height={{ base: "50px", md: "60px" }}

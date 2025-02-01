@@ -6,11 +6,9 @@
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -95,48 +93,48 @@ button:focus-visible {
   }
 }
 
-/* 🔥 FIXED: Custom Scrollbar Styling for ALL Browsers */
+/* 🔥 Custom Scrollbar Styling */
 
-/* **For Chrome, Edge, and Safari (WebKit browsers)** */
+/* Firefox */
+html {
+  scrollbar-width: thin !important;
+  scrollbar-color: #C02232 #f4f4f4 !important; /* Thumb | Track */
+}
+
+/* WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 10px; /* Adjust scrollbar width */
-  height: 10px; /* For horizontal scrollbars */
+  width: 10px !important; /* Adjust scrollbar width */
+  height: 10px !important; /* For horizontal scrollbars */
 }
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-  background: #f4f4f4; /* Light background */
-  border-radius: 10px;
+  background: #f4f4f4 !important; /* Light background */
+  border-radius: 10px !important;
 }
 
 /* Scrollbar Thumb (Draggable Part) */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #C02232, #d62828); /* Stylish red gradient */
-  border-radius: 10px;
-  transition: background 0.3s ease-in-out;
+  background: linear-gradient(135deg, #C02232, #d62828) !important; /* Stylish red gradient */
+  border-radius: 10px !important;
+  transition: background 0.3s ease-in-out !important;
 }
 
 /* Hover Effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #d62828, #C02232); /* Reverse gradient */
+  background: linear-gradient(135deg, #d62828, #C02232) !important; /* Reverse gradient */
 }
 
 /* Horizontal Scrollbar */
 ::-webkit-scrollbar-horizontal {
-  height: 8px;
+  height: 8px !important;
 }
 
 ::-webkit-scrollbar-track:horizontal {
-  background: #f0f0f0;
+  background: #f0f0f0 !important;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  background: linear-gradient(135deg, #C02232, #d62828);
-  border-radius: 10px;
-}
-
-/* **For Firefox** */
-html {
-  scrollbar-width: thin; /* Makes scrollbar thin */
-  scrollbar-color: #C02232 #f4f4f4; /* Thumb | Track */
+  background: linear-gradient(135deg, #C02232, #d62828) !important;
+  border-radius: 10px !important;
 }

@@ -252,7 +252,7 @@ const OurBrands = ({ brands, direction = "right" }) => {
         {brandList.map((brand, index) => (
           <Link key={`${brand.id}-${index}`} href={brand.link} isExternal _hover={{ textDecoration: "none" }}>
             <Flex flexDirection="column" alignItems="center" transition="transform 0.3s ease" _hover={{ transform: "scale(1.1)" }}>
-              <Image src={brand.logo} alt={brand.name} boxSize={imageSize} objectFit="contain" />
+              <Image src={brand.logo} alt={brand.name} boxSize={imageSize} objectFit="contain" borderRadius={"full"} />
             </Flex>
           </Link>
         ))}

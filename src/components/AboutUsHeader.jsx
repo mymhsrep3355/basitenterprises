@@ -40,6 +40,8 @@ const AboutUsHeader = () => {
         >
           Crafting Wellness with Precision and Passion
         </Heading>
+             
+
         <Heading
           as="h2"
           fontSize={{ base: "lg", md: "xl" }}

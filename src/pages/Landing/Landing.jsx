@@ -55,7 +55,7 @@ const Landing = () => {
   ];
   const brandsPolutay = [
     { id: 1, name: "Brand 6", logo: "/polutary/brand1.png", link: "/brand6" },
-    { id: 2, name: "Brand 7", logo: "/polutary/brand2.png", link: "/brand7" },
+    { id: 2, name: "Brand 7", logo: "/polutary/LOGO-UNIVET.png", link: "/brand7" },
     { id: 3, name: "Brand 8", logo: "/polutary/brand3.png", link: "/brand8" },
     { id: 4, name: "Brand 9", logo: "/polutary/brand4.png", link: "/brand9" },
     {

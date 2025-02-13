@@ -46,7 +46,8 @@ const AboutUs = ({ textImage, heading, description, mainImage, reverse }) => {
             fontSize="xl" // Reduced font size
             color="gray.800"
             mb={1}
-            fontFamily="'Poppins', sans-serif"
+            fontFamily="'Poppins', sans-serif" 
+            
           >
             {heading}
           </Text>

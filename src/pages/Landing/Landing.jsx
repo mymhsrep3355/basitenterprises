@@ -76,9 +76,10 @@ const Landing = () => {
     >
       {/* <Header /> */}
       <Navbar />
-      <HeroSection />
-      <AboutUsHeader id="about-us" />
+      <HeroSection id="hero" />
+      <AboutUsHeader />
       <AboutUs
+        id="about-us"
         textImage="/cat.png"
         heading={"A Vision for a Healthier Tomorrow"}
         description="We believe that healthier animals lead to healthier communities. This philosophy drives us to continuously innovate, collaborate, and expand our reach across Pakistan, partnering with farmers, veterinarians, and pet owners to create a brighter future for all."
@@ -112,10 +113,10 @@ const Landing = () => {
       <Banner heading={"Our Poultry Brands"} rightImage={"/chicks-hen.png"} />
       <OurBrands brands={brandsPolutay} direction="left" />
       <OurAchievements />
-      <ContactUs id="contact-us" />
+      <ContactUs id="contact" />
       <OurLocation />
-      <Flex flex="1" />
-      <Footer />
+      {/* <Flex flex="1" /> */}
+      <Footer id="blogs" />
       <Footnote />
       <ScrollToTop />
     </Box>

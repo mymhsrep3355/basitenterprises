@@ -21,7 +21,7 @@ import { textRed } from "../constants.js";
 
 const MotionBox = motion(Box);
 
-const ContactUs = () => {
+const ContactUs = ({id}) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   const containerVariants = {
@@ -31,6 +31,7 @@ const ContactUs = () => {
 
   return (
     <Box
+    id={id}
       as="section"
       w="full"
       px={{ base: "4", md: "10", lg: "20" }}

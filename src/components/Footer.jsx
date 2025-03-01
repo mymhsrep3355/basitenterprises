@@ -22,9 +22,10 @@ import { textRed } from "../constants";
 
 const MotionBox = motion(Box);
 
-const Footer = () => {
+const Footer = ({id}) => {
   return (
     <MotionBox
+      id={id} // Now id is correctly a string, e.g. "blogs"
       bg="black"
       color="white"
       px={{ base: 6, md: 10 }}
@@ -54,7 +55,12 @@ const Footer = () => {
             maxW="300px"
             objectFit="contain"
           />
-          <Text fontSize="md" color="gray.400" textAlign="justify" fontFamily={'Poppins'}>
+          <Text
+            fontSize="md"
+            color="gray.400"
+            textAlign="justify"
+            fontFamily={"Poppins"}
+          >
             For over three decades, Basit Enterprises has been a family-run
             business dedicated to improving animal welfare across Pakistan. We
             proudly offer a diverse range of high-quality and innovative
@@ -65,7 +71,13 @@ const Footer = () => {
             best solutions in animal care
           </Text>
 
-          <VStack align="start" spacing={5} mt={{ base: 6, md: 0 }} fontFamily={'Poppins'} flexFlow={'column'}>
+          <VStack
+            align="start"
+            spacing={5}
+            mt={{ base: 6, md: 0 }}
+            fontFamily={"Poppins"}
+            flexFlow={"column"}
+          >
             <Text fontWeight="bold" fontSize="lg" mb={1}>
               Keep in Touch
             </Text>
@@ -99,7 +111,7 @@ const Footer = () => {
           flex="1"
           mt={{ base: 6, md: 0 }}
           width="100%"
-          fontFamily={'Poppins'}
+          fontFamily={"Poppins"}
         >
           {[
             // { title: "Home", subLinks: [] },
@@ -115,24 +127,24 @@ const Footer = () => {
             },
             { title: "Pet Food Brands", subLinks: [] },
             {
-                title: "Premium Brands",
-                subLinks: [
-                    { category: "Premium", links: ["Paw Paw"] },
-                    {
+              title: "Premium Brands",
+              subLinks: [
+                { category: "Premium", links: ["Paw Paw"] },
+                {
                   category: "Premium",
                   links: ["Petbite"],
                 },
                 {
                   category: "Super Premium",
-                  links: ['Petiva'],
-                }
+                  links: ["Petiva"],
+                },
               ],
             },
-            { title: "VetFood", subLinks: ['Benefit'] },
-            { title: "Grain Free", subLinks: ['Klicker'] },
-            { title: "Premium Cat Litter", subLinks: ['Catterlitter'] },
+            { title: "VetFood", subLinks: ["Benefit"] },
+            { title: "Grain Free", subLinks: ["Klicker"] },
+            { title: "Premium Cat Litter", subLinks: ["Catterlitter"] },
             { title: "Poultry Brands", subLinks: [] },
-            {title: "Contact Us", subLinks: []},
+            { title: "Contact Us", subLinks: [] },
 
             // 'Hilton','Aptly','Zoic','Univet','Selmore'
           ].map((section, idx) => (

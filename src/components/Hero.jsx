@@ -33,7 +33,7 @@ const wordsLine1 = ["Basit", "Enterprises,"];
 const wordsLine2 = ["precision", "in", "care,"];
 const wordsLine3 = ["passion", "in", "health"];
 
-const HeroSection = () => {
+const HeroSection = (id) => {
   // Function to scroll down the page
   const scrollDown = () => {
     window.scrollBy({
@@ -44,9 +44,10 @@ const HeroSection = () => {
 
   return (
     <Box
+      id={id}
       as="section"
       w="100%"
-      h={{ base: "55vh", sm: "35vh", md: "65vh", lg: "100vh" }}
+      h={{ base: "55vh", sm: "35vh", md: "65vh", lg: "90vh" }}
       bgImage="url('https://images.unsplash.com/photo-1524060814534-c8540185978d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
       bgSize="cover"
       bgPosition="center"

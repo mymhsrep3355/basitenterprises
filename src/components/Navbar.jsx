@@ -161,9 +161,15 @@
 
 
 
-
 import React, { useState, useEffect } from "react";
-import { Box, Flex, Link, Image, IconButton, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Link,
+  Image,
+  IconButton,
+  VStack,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
@@ -173,11 +179,11 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 30);
-  };
-
+  // Detect scroll for background change
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -185,117 +191,128 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-    setIsOpen(false); // Close the menu on smaller screens
+    setIsOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -80;
+        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100); 
+    console.log(id);
+    
   };
 
   const links = [
     { name: "About Us", id: "about-us" },
     { name: "Our Brands", id: "our-brands" },
-    { name: "Contact", id: "contact-us" },
+    { name: "Contact", id: "contact" },
     { name: "Blogs", id: "blogs" },
   ];
 
+  // Fixed height for the navbar so we can offset the mobile menu
+  const NAVBAR_HEIGHT = "80px";
+
   return (
-    <Box w="full" position="fixed" top="0" zIndex="20">
-      <Flex
-        as="nav"
-        position={scrolled ? "sticky" : "absolute"}
+    <>
+      {/* Fixed Navbar */}
+      <Box
+        as="header"
+        position="fixed"
         top="0"
         left="0"
-        w="100vw"
-        maxW="100vw"
+        w="full"
+        zIndex="1000"
         bg={scrolled ? "rgba(255, 255, 255, 0.8)" : "rgba(138, 30, 30, 0.39)"}
         backdropFilter={scrolled ? "blur(11px)" : "none"}
         transition="all 0.3s ease"
-        px={{ base: "4", md: "8", lg: "16" }}
-        py={{ base: "2", md: "4" }}
-        alignItems="center"
-        justifyContent="space-between"
         boxShadow={scrolled ? "sm" : "none"}
-        zIndex="1000"
-        overflowX="hidden"
       >
-        {/* Logo */}
-        <Image
-          src="/logo1.png"
-          alt="Logo"
-          width={{ base: "120px", md: "150px" }}
-          height={{ base: "50px", md: "60px" }}
-          objectFit="cover"
-        />
-
-        {/* Desktop Links */}
         <Flex
-          gap="6"
+          as="nav"
           alignItems="center"
-          display={{ base: "none", md: "flex" }}
+          justifyContent="space-between"
+          px={{ base: 4, md: 8, lg: 16 }}
+          py={{ base: 2, md: 4 }}
+          h={NAVBAR_HEIGHT} 
         >
-          {links.map((link, index) => (
-            <MotionBox
-              key={index}
-              position="relative"
-              _hover={{ "& div": { width: "100%" } }}
-            >
-              <Link
-                onClick={() => scrollToSection(link.id)}
-                fontWeight={500}
-                // fontStyle={'Poppins'}
-                fontFamily={'Poppins'}
-                fontSize="xl"
-                textTransform="uppercase"
-                color={scrolled ? "gray.800" : "gray.800"}
-                _hover={{ textDecoration: "none", color: "red.500" }}
+          {/* Logo */}
+          <Image
+            src="/logo1.png"
+            alt="Logo"
+            width={{ base: "120px", md: "150px" }}
+            height={{ base: "50px", md: "60px" }}
+            objectFit="cover"
+          />
+
+          {/* Desktop Links */}
+          <Flex
+            gap="6"
+            alignItems="center"
+            display={{ base: "none", md: "flex" }}
+          >
+            {links.map((link, index) => (
+              <MotionBox
+                key={index}
                 position="relative"
-                transition="color 0.3s ease-in-out"
+                _hover={{ "& div": { width: "100%" } }}
               >
-                {link.name}
-              </Link>
-              <Box
-                position="absolute"
-                left="0"
-                bottom="-3px"
-                width="0%"
-                height="2px"
-                bg="red.500"
-                transition="width 0.3s ease-in-out"
-              />
-            </MotionBox>
-          ))}
+                <Link
+                  onClick={() => scrollToSection(link.id)}
+                  fontWeight={500}
+                  fontFamily="Poppins"
+                  fontSize="xl"
+                  textTransform="uppercase"
+                  color="gray.800"
+                  _hover={{ textDecoration: "none", color: "red.500" }}
+                  position="relative"
+                  transition="color 0.3s ease-in-out"
+                >
+                  
+                  {link.name}
+                </Link>
+                <Box
+                  position="absolute"
+                  left="0"
+                  bottom="-3px"
+                  width="0%"
+                  height="2px"
+                  bg="red.500"
+                  transition="width 0.3s ease-in-out"
+                />
+              </MotionBox>
+            ))}
+          </Flex>
+
+          {/* Mobile Menu Icon */}
+          <IconButton
+            aria-label="Open Menu"
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            display={{ base: "flex", md: "none" }}
+            onClick={toggleMenu}
+            variant="ghost"
+            colorScheme="blackAlpha"
+            fontSize="24px"
+          />
         </Flex>
+      </Box>
 
-        {/* Mobile Menu Icon */}
-        <IconButton
-          aria-label="Open Menu"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          display={{ base: "flex", md: "none" }}
-          onClick={toggleMenu}
-          variant="ghost"
-          colorScheme="blackAlpha"
-          fontSize="24px"
-        />
-      </Flex>
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu (drawn below the fixed navbar) */}
       {isOpen && (
         <VStack
+          position="fixed"
+          top={NAVBAR_HEIGHT} // offset so it appears below the navbar
+          left="0"
+          w="full"
           bg="rgba(255, 255, 255, 0.9)"
           backdropFilter="blur(12px)"
           transition="all 0.3s ease"
-          pos="absolute"
-          top="100%"
-          left="0"
-          w="100%"
           py="4"
           spacing="4"
           display={{ base: "flex", md: "none" }}
           boxShadow="md"
+          zIndex="999"
         >
           {links.map((link, index) => (
             <Link
@@ -303,7 +320,7 @@ const Navbar = () => {
               onClick={() => scrollToSection(link.id)}
               fontWeight="bold"
               fontSize="lg"
-              fontFamily={'Poppins'}
+              fontFamily="Poppins"
               textTransform="uppercase"
               color="gray.800"
               _hover={{ color: "red.500" }}
@@ -313,7 +330,13 @@ const Navbar = () => {
           ))}
         </VStack>
       )}
-    </Box>
+
+      {/* Spacer to push page content below the fixed navbar */}
+      <Box height={NAVBAR_HEIGHT} />
+
+      {/* Rest of your page sections here */}
+      {/* ... */}
+    </>
   );
 };
 

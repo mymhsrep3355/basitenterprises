@@ -14,7 +14,7 @@ const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
 const MotionImage = motion(Image);
 
-const Banner = ({ heading, rightImage }) => {
+const Banner = ({id, heading, rightImage }) => {
   const headingFontSize = useBreakpointValue({
     base: "35px", // smaller screens
     md: "28px", // medium screens
@@ -23,6 +23,7 @@ const Banner = ({ heading, rightImage }) => {
 
   return (
     <MotionBox
+    id={id}
       position="relative"
       width="100%"
       bg="linear-gradient(115deg, rgba(0, 0, 0, 1), rgba(255, 0, 30, 0.6))"

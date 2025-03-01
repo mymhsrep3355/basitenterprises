@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
-const AboutUs = ({ textImage, heading, description, mainImage, reverse }) => {
+const AboutUs = ({id, textImage, heading, description, mainImage, reverse }) => {
   return (
-    <Box w="100%" bg="gray.50" py={{ base: 4, md: 6 }}>
+    <Box id={id} w="100%" bg="gray.50" py={{ base: 4, md: 6 }}>
       <Flex
         direction={{ base: "column", lg: reverse ? "row-reverse" : "row" }}
         align="center"
